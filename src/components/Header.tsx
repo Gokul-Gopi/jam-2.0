@@ -7,9 +7,9 @@ import clsx from "clsx";
 
 const Header = () => {
   return (
-    <nav className="px-4 py-6 flex justify-between">
+    <div className="px-4 py-6 flex justify-between">
       <div className="flex">
-        <button className="text-4xl mr-2 text-gray-300 hover:text-gray-500">
+        <button className="text-4xl mr-2 text-gray-600 hover:text-gray-500">
           <BiMenuAltRight />
         </button>
         <span className="text-primary text-3xl font-semibold">JAM!</span>
@@ -31,7 +31,7 @@ const Header = () => {
           <BiLogOutCircle />
         </Button>
       </div>
-    </nav>
+    </div>
   );
 };
 
