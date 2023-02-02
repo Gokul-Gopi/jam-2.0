@@ -3,13 +3,21 @@ import { BiLogOutCircle, BiMenuAltRight, BiSearchAlt } from "react-icons/bi";
 import { Button } from "@mantine/core";
 import style from "../styles/Home.module.css";
 import clsx from "clsx";
+import { Dispatch, SetStateAction } from "react";
 // shadow-[0_3px_18px_-5px_rgba(0,0,0,0.1)]
 
-const Header = () => {
+interface IHeader {
+  expandNavbar: Dispatch<SetStateAction<boolean>>;
+}
+
+const Header = ({ expandNavbar }: IHeader) => {
   return (
     <div className="px-4 py-6 flex justify-between">
       <div className="flex">
-        <button className="text-4xl mr-2 text-gray-600 hover:text-gray-500">
+        <button
+          onClick={() => expandNavbar((preState) => !preState)}
+          className="text-4xl mr-2 text-gray-600 hover:text-gray-500"
+        >
           <BiMenuAltRight />
         </button>
         <span className="text-primary text-3xl font-semibold">JAM!</span>

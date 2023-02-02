@@ -14,3 +14,19 @@
     background-position: 20vw;
   }
 }
+
+.expandedNav {
+  animation-name: openExpandedNav;
+  animation-duration: 0.5s;
+}
+
+@keyframes openExpandedNav {
+  0% {
+    transform: translateX(-30px);
+  }
+  80% {
+  }
+  100% {
+    transform: translate(0);
+  }
+}
