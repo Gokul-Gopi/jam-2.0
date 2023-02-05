@@ -24,12 +24,12 @@ const Navbar = ({ isExpand }: INavbar) => {
           style.expandedNav
         )}
       >
-        <ul className="flex border-gray-100 flex-col pb-2">
+        <ul className="flex flex-col border-gray-100 pb-2">
           {navItems.map((item) => {
             return (
               <li
                 key={item.name}
-                className="flex px-3 py-4 gap-4 items-center cursor-pointer border-b-2 hover:bg-slate-100"
+                className="flex cursor-pointer items-center gap-4 border-b-2 px-3 py-4 hover:bg-slate-100"
               >
                 <button className="text-3xl text-gray-600">{item.icon}</button>
                 <span>{item.name}</span>
@@ -38,7 +38,7 @@ const Navbar = ({ isExpand }: INavbar) => {
           })}
         </ul>
         <div className="py-4">
-          <p className="text-center mb-6">People to follow</p>
+          <p className="mb-6 text-center">People to follow</p>
           <div className="flex flex-col gap-5">
             {[1, 2, 3, 4].map((e) => {
               return (
@@ -62,7 +62,7 @@ const Navbar = ({ isExpand }: INavbar) => {
       <ul className="flex flex-col gap-7 px-4 pt-4">
         {navItems.map((item) => {
           return (
-            <li key={item.name} className="flex gap-5 items-center">
+            <li key={item.name} className="flex items-center gap-5">
               <button className="text-3xl text-gray-600">{item.icon}</button>
             </li>
           );

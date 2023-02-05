@@ -12,15 +12,15 @@ interface IHeader {
 
 const Header = ({ expandNavbar }: IHeader) => {
   return (
-    <div className="px-4 py-6 flex justify-between">
+    <div className="flex justify-between px-4 py-6">
       <div className="flex">
         <button
           onClick={() => expandNavbar((preState) => !preState)}
-          className="text-4xl mr-2 text-gray-600 hover:text-gray-500"
+          className="mr-2 text-4xl text-gray-600 hover:text-gray-500"
         >
           <BiMenuAltRight />
         </button>
-        <span className="text-primary text-3xl font-semibold">JAM!</span>
+        <span className="text-3xl font-semibold text-primary">JAM!</span>
       </div>
       <div className="w-1/2">
         <Input
@@ -35,7 +35,7 @@ const Header = ({ expandNavbar }: IHeader) => {
         >
           What on your mind?
         </Button>
-        <Button className="px-2 border-red-400 text-red-400 text-lg hover:bg-red-400 hover:text-white">
+        <Button className="border-red-400 px-2 text-lg text-red-400 hover:bg-red-400 hover:text-white">
           <BiLogOutCircle />
         </Button>
       </div>

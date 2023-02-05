@@ -12,7 +12,7 @@ interface IUserCard {
 
 const UserCard = ({ name, image, bio, followers, likes }: IUserCard) => {
   return (
-    <div className="rounded-lg border-2 p-2 flex flex-col gap-3 items-center pt-4">
+    <div className="flex flex-col items-center gap-3 rounded-lg border-2 p-2 pt-4">
       <div>
         <Image
           className="rounded-full"
@@ -24,9 +24,9 @@ const UserCard = ({ name, image, bio, followers, likes }: IUserCard) => {
       </div>
       <div className="flex flex-col items-center justify-center">
         <p className="text-lg">{name}</p>
-        <p className="text-gray-400 truncate w-44 text-center">{bio}</p>
+        <p className="w-44 truncate text-center text-gray-400">{bio}</p>
       </div>
-      <div className="flex justify-between w-32 px-2">
+      <div className="flex w-32 justify-between px-2">
         <div className="flex items-center gap-1">
           <BsPeopleFill className="text-blue-500" />
           <span>{followers}</span>
@@ -36,7 +36,7 @@ const UserCard = ({ name, image, bio, followers, likes }: IUserCard) => {
           <span>{likes}</span>
         </div>
       </div>
-      <button className="bg-primary text-white w-full p-2 rounded-lg">
+      <button className="w-full rounded-lg bg-primary p-2 text-white">
         Follow
       </button>
     </div>
