@@ -10,7 +10,7 @@ const BasicLayout = ({ children }: { children: JSX.Element }) => {
       <Header expandNavbar={setExpandContainer} />
       <div className="flex mt-4">
         <Navbar isExpand={expandContainer} />
-        <section className="h-[86.5vh] overflow-y-auto">{children}</section>
+        <section className="h-layout overflow-y-auto">{children}</section>
       </div>
     </div>
   );

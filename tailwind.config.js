@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         primary: "#3474FF",
       },
+      height: {
+        layout: "86.5vh",
+      },
     },
   },
   plugins: [],
