@@ -1,7 +1,10 @@
 import clsx from "clsx";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 import {
   BiBell,
-  BiEditAlt,
+  BiHome,
   BiMessageRoundedDots,
   BiUserCircle,
 } from "react-icons/bi";
@@ -13,6 +16,7 @@ interface INavbar {
 }
 
 const Navbar = ({ isExpand }: INavbar) => {
+  const router = useRouter();
   if (isExpand) {
     return (
       <nav
@@ -21,7 +25,6 @@ const Navbar = ({ isExpand }: INavbar) => {
           "overflow-y-auto",
           "h-layout",
           "p-4",
-          "mr-8",
           style.expandedNav
         )}
       >
@@ -56,11 +59,22 @@ const Navbar = ({ isExpand }: INavbar) => {
     );
   }
   return (
-    <nav className="mr-8 w-fit">
+    <nav className="w-fit">
       <ul className="flex flex-col gap-7 px-4 pt-8">
         {navItems.map((item) => (
           <li key={item.name} className="flex items-center gap-5">
-            <button className="text-3xl text-gray-600">{item.icon}</button>
+            <Link href={item.path}>
+              <button
+                className={clsx(
+                  router.pathname === item.path &&
+                    "rounded-md bg-primary text-white",
+                  "p-2",
+                  "text-2xl"
+                )}
+              >
+                {item.icon}
+              </button>
+            </Link>
           </li>
         ))}
       </ul>
@@ -70,24 +84,24 @@ const Navbar = ({ isExpand }: INavbar) => {
 
 const navItems = [
   {
-    icon: <BiEditAlt />,
-    link: "/",
-    name: "Post",
+    icon: <BiHome />,
+    path: "/",
+    name: "Feed",
   },
   {
     icon: <BiMessageRoundedDots />,
-    link: "/",
+    path: "/message",
     name: "Messages",
   },
   {
     icon: <BiBell />,
-    link: "/",
+    path: "/notification",
     name: "Notifications",
   },
   {
     icon: <BiUserCircle />,
-    link: "/",
-    name: "Profile",
+    path: "/my-profile",
+    name: "profile",
   },
 ];
 
