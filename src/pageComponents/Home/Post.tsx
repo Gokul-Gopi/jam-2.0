@@ -14,7 +14,7 @@ interface IPost {
 
 const Post = ({ username, image, likes, comments }: IPost) => {
   return (
-    <div className="relative">
+    <div className="group relative mb-4 overflow-hidden rounded-lg ">
       <Image
         src={image}
         alt="post"
@@ -23,6 +23,7 @@ const Post = ({ username, image, likes, comments }: IPost) => {
         loading="lazy"
         placeholder="blur"
         blurDataURL="https://via.placeholder.com/500"
+        className="scale-100 rounded-lg duration-300 ease-out group-hover:scale-105"
       />
       <div className="to-gray-50-500 absolute inset-0 flex cursor-pointer flex-col justify-between bg-gradient-to-tr from-[rgba(0,0,0,0.4)] p-4 text-white opacity-0 transition-all delay-100 hover:opacity-100">
         <span>{username}</span>

@@ -2,15 +2,12 @@ import Masonry from "react-masonry-css";
 import style from "../styles/Home.module.css";
 import BasicLayout from "../layout/BasicLayout";
 import Post from "../pageComponents/Home/Post";
+import clsx from "clsx";
 
 export default function Home() {
   return (
     <BasicLayout>
-      <Masonry
-        breakpointCols={3}
-        className={style["my-masonry-grid"]}
-        columnClassName={style["my-masonry-grid_column"]}
-      >
+      <div className="columns-2 lg:columns-3">
         {post.map((post) => (
           <Post
             image={post.image}
@@ -19,7 +16,7 @@ export default function Home() {
             comments={11}
           />
         ))}
-      </Masonry>
+      </div>
     </BasicLayout>
   );
 }

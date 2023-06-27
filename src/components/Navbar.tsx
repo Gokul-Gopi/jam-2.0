@@ -32,7 +32,7 @@ const Navbar = ({ isExpand }: INavbar) => {
           {navItems.map((item) => (
             <li
               key={item.name}
-              className="flex cursor-pointer items-center gap-4 border-b-2 px-3 py-4 hover:bg-slate-100"
+              className="flex cursor-pointer items-center gap-4 border-b px-3 py-4 last:border-none hover:bg-slate-100"
             >
               <button className="text-3xl text-gray-600">{item.icon}</button>
               <span>{item.name}</span>
@@ -40,7 +40,7 @@ const Navbar = ({ isExpand }: INavbar) => {
           ))}
         </ul>
 
-        <div className="py-4">
+        {/* <div className="py-4">
           <p className="mb-6 text-center">People to follow</p>
           <div className="flex flex-col gap-5">
             {[1, 2, 3, 4].map((e) => (
@@ -54,7 +54,7 @@ const Navbar = ({ isExpand }: INavbar) => {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </nav>
     );
   }
@@ -62,7 +62,7 @@ const Navbar = ({ isExpand }: INavbar) => {
     <nav className="w-fit">
       <ul className="flex flex-col gap-7 px-4 pt-8">
         {navItems.map((item) => (
-          <li key={item.name} className="flex items-center gap-5">
+          <li key={item.name} className="flex items-center gap-4">
             <Link href={item.path}>
               <button
                 className={clsx(
