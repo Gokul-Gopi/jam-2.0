@@ -6,10 +6,12 @@ import {
   BiBell,
   BiHome,
   BiMessageRoundedDots,
+  BiMessageSquareDetail,
   BiUserCircle,
 } from "react-icons/bi";
 import style from "../styles/Home.module.css";
 import UserCard from "./UserCard";
+import { ActionIcon, Button } from "@mantine/core";
 
 interface INavbar {
   isExpand: boolean;
@@ -59,22 +61,23 @@ const Navbar = ({ isExpand }: INavbar) => {
     );
   }
   return (
-    <nav className="w-fit">
-      <ul className="flex flex-col gap-7 px-4 pt-8">
+    <nav className="">
+      <ul className="flex flex-col gap-6 px-6 pt-8">
         {navItems.map((item) => (
-          <li key={item.name} className="flex items-center gap-4">
-            <Link href={item.path}>
-              <button
-                className={clsx(
-                  router.pathname === item.path &&
-                    "rounded-md bg-primary text-white",
-                  "p-2",
-                  "text-2xl"
-                )}
-              >
-                {item.icon}
-              </button>
-            </Link>
+          <li key={item.name} className="flex">
+            <ActionIcon
+              className={clsx(
+                "rounded-md p-2 text-2xl",
+                router.pathname === item.path
+                  ? "bg-primary text-white"
+                  : "text-gray-500 hover:bg-blue-50"
+              )}
+              unstyled
+              component={Link}
+              href={item.path}
+            >
+              {item.icon}
+            </ActionIcon>
           </li>
         ))}
       </ul>
@@ -89,7 +92,7 @@ const navItems = [
     name: "Feed",
   },
   {
-    icon: <BiMessageRoundedDots />,
+    icon: <BiMessageSquareDetail />,
     path: "/message",
     name: "Messages",
   },

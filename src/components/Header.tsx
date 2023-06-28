@@ -12,7 +12,7 @@ interface IHeader {
 
 const Header = ({ expandNavbar }: IHeader) => {
   return (
-    <div className="flex justify-between px-4 py-6">
+    <div className="flex justify-between p-6">
       <div className="flex">
         {/* <button
           onClick={() => expandNavbar((preState) => !preState)}
@@ -23,11 +23,7 @@ const Header = ({ expandNavbar }: IHeader) => {
         <span className="text-3xl font-semibold text-primary">JAM!</span>
       </div>
       <div className="w-1/2">
-        <Input
-          radius="md"
-          icon={<BiSearchAlt />}
-          placeholder="Search users.."
-        />
+        <Input radius="md" icon={<BiSearchAlt />} placeholder="Search.." />
       </div>
       <div className="flex gap-2">
         <Button

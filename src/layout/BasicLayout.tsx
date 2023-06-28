@@ -8,9 +8,9 @@ const BasicLayout = ({ children }: { children: JSX.Element }) => {
   return (
     <div className="min-h-screen">
       <Header expandNavbar={setExpandContainer} />
-      <div className="mt-4 flex">
+      <div className="flex">
         <Navbar isExpand={expandContainer} />
-        <section className="h-layout w-full overflow-y-auto py-4 px-4">
+        <section className="h-layout w-full overflow-y-auto py-4 pr-4">
           {children}
         </section>
       </div>
