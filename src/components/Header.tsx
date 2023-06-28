@@ -14,12 +14,12 @@ const Header = ({ expandNavbar }: IHeader) => {
   return (
     <div className="flex justify-between px-4 py-6">
       <div className="flex">
-        <button
+        {/* <button
           onClick={() => expandNavbar((preState) => !preState)}
           className="mr-2 text-4xl text-gray-600 hover:text-gray-500"
         >
           <BiMenuAltRight />
-        </button>
+        </button> */}
         <span className="text-3xl font-semibold text-primary">JAM!</span>
       </div>
       <div className="w-1/2">

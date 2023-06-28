@@ -53,5 +53,4 @@
 
 .feed-grid-container {
   columns: 3;
-  break-inside: avoid-page;
 }
