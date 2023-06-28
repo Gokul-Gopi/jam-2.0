@@ -10,6 +10,7 @@ export default function Home() {
       <div className="columns-2 lg:columns-3">
         {post.map((post) => (
           <Post
+            key={post.id}
             image={post.image}
             username="meetagain"
             likes={40}
