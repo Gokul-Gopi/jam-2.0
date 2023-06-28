@@ -1,16 +1,15 @@
-import { Input } from "@mantine/core";
-import { BiLogOutCircle, BiMenuAltRight, BiSearchAlt } from "react-icons/bi";
-import { Button } from "@mantine/core";
-import style from "../styles/Home.module.css";
-import clsx from "clsx";
-import { Dispatch, SetStateAction } from "react";
+import { Input, Button } from '@mantine/core';
+import { BiLogOutCircle, BiSearchAlt } from 'react-icons/bi';
+import clsx from 'clsx';
+// import { Dispatch, SetStateAction } from 'react';
+import style from '../styles/Home.module.css';
 // shadow-[0_3px_18px_-5px_rgba(0,0,0,0.1)]
 
-interface IHeader {
-  expandNavbar: Dispatch<SetStateAction<boolean>>;
-}
+// interface IHeader {
+//   expandNavbar: Dispatch<SetStateAction<boolean>>;
+// }
 
-const Header = ({ expandNavbar }: IHeader) => {
+const Header = () => {
   return (
     <div className="col-span-2 flex justify-between p-6">
       <div className="flex">
@@ -26,9 +25,7 @@ const Header = ({ expandNavbar }: IHeader) => {
         <Input radius="md" icon={<BiSearchAlt />} placeholder="Search.." />
       </div>
       <div className="flex gap-2">
-        <Button
-          className={clsx("bg-primary", style["rainbow-effect-animation"])}
-        >
+        <Button className={clsx('bg-primary', style['rainbow-effect-animation'])}>
           What on your mind?
         </Button>
         <Button className="border-red-400 px-2 text-lg text-red-400 hover:bg-red-400 hover:text-white">

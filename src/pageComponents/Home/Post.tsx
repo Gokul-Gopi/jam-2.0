@@ -1,14 +1,15 @@
-import { ActionIcon } from "@mantine/core";
-import Image from "next/image";
-import { AiOutlineHeart } from "react-icons/ai";
-import { BiComment } from "react-icons/bi";
-import { BsCalendarDate } from "react-icons/bs";
+import { ActionIcon } from '@mantine/core';
+import Image from 'next/image';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { BiComment } from 'react-icons/bi';
 
 interface IPost {
+  // eslint-disable-next-line react/no-unused-prop-types
   id?: string;
   username: string;
   likes: number;
-  post?: any; //TODO: changes this to postType-- Image/Text
+  // eslint-disable-next-line react/no-unused-prop-types
+  post?: unknown; // TODO: changes this to postType-- Image/Text
   image: string;
   comments: number;
 }

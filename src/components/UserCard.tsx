@@ -1,6 +1,7 @@
-import Image from "next/image";
-import { BsPeopleFill } from "react-icons/bs";
-import { AiFillHeart } from "react-icons/ai";
+import Image from 'next/image';
+import { BsPeopleFill } from 'react-icons/bs';
+import { AiFillHeart } from 'react-icons/ai';
+import { Button } from '@mantine/core';
 
 interface IUserCard {
   name: string;
@@ -14,13 +15,7 @@ const UserCard = ({ name, image, bio, followers, likes }: IUserCard) => {
   return (
     <div className="flex flex-col items-center gap-3 rounded-lg border-2 p-2 pt-4">
       <div>
-        <Image
-          className="rounded-full"
-          src={image}
-          alt="user"
-          width={100}
-          height={200}
-        />
+        <Image className="rounded-full" src={image} alt="user" width={100} height={200} />
       </div>
       <div className="flex flex-col items-center justify-center">
         <p className="text-lg">{name}</p>
@@ -36,9 +31,7 @@ const UserCard = ({ name, image, bio, followers, likes }: IUserCard) => {
           <span>{likes}</span>
         </div>
       </div>
-      <button className="w-full rounded-lg bg-primary p-2 text-white">
-        Follow
-      </button>
+      <Button className="w-full rounded-lg bg-primary p-2 text-white">Follow</Button>
     </div>
   );
 };
