@@ -12,7 +12,7 @@ interface IHeader {
 
 const Header = ({ expandNavbar }: IHeader) => {
   return (
-    <div className="flex justify-between p-6">
+    <div className="col-span-2 flex justify-between p-6">
       <div className="flex">
         {/* <button
           onClick={() => expandNavbar((preState) => !preState)}

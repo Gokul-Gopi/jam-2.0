@@ -64,7 +64,7 @@ const Navbar = ({ isExpand }: INavbar) => {
     <nav className="">
       <ul className="flex flex-col gap-6 px-6 pt-8">
         {navItems.map((item) => (
-          <li key={item.name} className="flex">
+          <li key={item.name} className="flex justify-center">
             <ActionIcon
               className={clsx(
                 "rounded-md p-2 text-2xl",
