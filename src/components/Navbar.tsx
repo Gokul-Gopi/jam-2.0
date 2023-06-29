@@ -31,7 +31,7 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="fixed bottom-0 right-0 left-0 z-10 border-t bg-white md:static md:border-t-0">
+    <nav className="row-start-3 border-t bg-white md:row-start-auto md:border-t-0">
       <ul className="flex justify-between gap-6 px-6 pt-4 pb-4 md:flex-col md:justify-start md:pt-8">
         {navItems.map(item => (
           <li key={item.name} className="flex justify-center">
