@@ -31,13 +31,13 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="">
-      <ul className="flex flex-col gap-6 px-6 pt-8">
+    <nav className="fixed bottom-0 right-0 left-0 z-10 border-t bg-white md:static md:border-t-0">
+      <ul className="flex justify-between gap-6 px-6 pt-4 pb-4 md:flex-col md:justify-start md:pt-8">
         {navItems.map(item => (
           <li key={item.name} className="flex justify-center">
             <ActionIcon
               className={clsx(
-                'rounded-md p-2 text-2xl',
+                'rounded-md p-2 text-3xl md:text-2xl',
                 router.pathname === item.path
                   ? 'bg-primary text-white'
                   : 'text-gray-500 hover:bg-blue-50',
